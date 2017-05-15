@@ -1,9 +1,18 @@
 # Accent Detection With Tensorflow and Librosa
-Senior Project To Detect Accent Using Tensorflow and Librosa
+University of California, San Diego 
+Department of Electrical Engineering
+ECE 191 Senior Project
+
+Team Members
+Kamran Aladross
+Michael Burdett
+Wade Chen
+Max Coehing 
+
 
 This project was done using Windows 10 with a Nvidia GTX860M graphics card. 
 You can accomplish the same using a computer without a graphics card by downloading the CPU version of Tensorflow. However, note that with the CPU version, it will take much longer for Tensorflow to build your models.
-## Step 1
+## Step 1 - Setting up our Tensorflow environment in Python
 First we need to install Python 3.5.x
 Go to 
 https://www.python.org/ftp/python/3.5.2/python-3.5.2-amd64-webinstall.exe
