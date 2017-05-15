@@ -95,6 +95,24 @@ Then, install tensorflow by typing
 ```
 pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-1.1.0-cp35-cp35m-win_amd64.whl
 ```
+Next, install tflearn by first going to http://www.lfd.uci.edu/~gohlke/pythonlibs/#curses and downloading 
+
+curses‑2.2‑cp35‑none‑win_amd64.whl
+
+For me, this downloaded in my Downloads folder (C:\Users\user\Downloads). Regardless of where it downloaded for you, go to that folder, and make sure the .whl file is there. Then copy this directory by right-clicking the folder in the bar at the top and click 
+
+"Copy Address"
+
+Now in the same command promt in our tensorflow environment, type
+```
+cd C:\Users\user\Downloads
+```
+or to whatever directory your file was installed in. CD changes your directory, so you need to go to the right one.
+
+Finally, you can type 
+```
+pip install tflearn
+```
 Now we should have all of the libraries installed in our Tensorflow environment to begin our work. To do a final check, run
 ```
 conda list
@@ -108,5 +126,6 @@ import tensorflow as tf
 import librosa
 import matplotlib
 import numpy
+import tflearn
 print('We did it!')
 ```
