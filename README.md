@@ -1,7 +1,7 @@
 # Accent Detection With Tensorflow and Librosa
 University of California, San Diego 
 
-Department of Electrical Engineering
+Department of Electrical and Computer Engineering
 
 ECE 191 Senior Project
 
@@ -53,34 +53,34 @@ https://www.continuum.io/downloads#windows
 
 Once anaconda is installed, you can check its version with:
 
-anaconda -V
+```anaconda -V```
 
 Now that we have anaconda installed, we can start installing the rest of the modules needed for our project.
 
 Again in the Command Prompt, type
 
-conda create -n tensorflow
+```conda create -n tensorflow```
 
 This creates a tensorflow environment in anaconda. After, type
 
-activate tensorflow
+```activate tensorflow```
 
 Now we are in our tensorflow environment.
 
 By typing 
 
-conda list
+```conda list```
 
 We can see what packages we currently have in our tensorflow environment. This will be important during the rest of the installation process to make check that we have instaled everything correctly.
 
 I am not sure if the next step is a redundancy, but after hours of failed attempts at setting up a working Tensorflow and librosa environment, we recommend that you install python in the tensorflow environment just to be safe.
 
-conda install python=3.5.2
+```conda install python=3.5.2```
 
 
 Next, we will install librosa (a Python library for audio and music analysis).
 
-conda install -c conda-forge librosa
+```conda install -c conda-forge librosa```
 
 Then, 
 
