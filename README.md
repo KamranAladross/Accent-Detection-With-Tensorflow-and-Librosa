@@ -12,6 +12,7 @@ Then, open up the command prompt and type:
 
 python -V
 
+You should see that 
 conda create -n tensorflow
 activate tensorflow
 python -V
