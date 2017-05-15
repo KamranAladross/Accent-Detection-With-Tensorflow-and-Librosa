@@ -42,9 +42,9 @@ https://www.python.org/ftp/python/3.5.2/python-3.5.2-amd64-webinstall.exe
 and download and install python.
 
 Then, open up the command prompt and type:
-
+```
 python -V
-
+```
 You should see that your current python version is correct.
 
 Next, we need to install anaconda.
@@ -93,6 +93,6 @@ hii
 conda create -n tensorflow
 activate tensorflow
 python -V
-conda list
+```conda list```
 conda install python=3.5.2
 conda install -c conda-forge librosa
