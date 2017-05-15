@@ -11,7 +11,13 @@ Kamran Aladross, Michael Burdett, Wade Chen, Max Coehing
 
 
 This project was done using Windows 10 with a Nvidia GTX860M graphics card. 
-You can accomplish the same using Ubuntu or Mac OSX, as well as without a graphics card. Simply download the CPU version of Tensorflow from their website. Note that with the CPU version, it will take much longer for Tensorflow to build your models.
+You can accomplish the same using Ubuntu or Mac OSX, as well as with a different Nvidia GPU, or without a dedicated GPU entirely. Simply download the CPU version of Tensorflow from their website. Note that with the CPU version, it will take much longer for Tensorflow to build your models.
+
+Directions found for this tutorial are credited to 
+
+Tensorflow - https://www.tensorflow.org/install/install_windows
+
+Nvidia - http://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/#axzz4h6DqhwSy
 
 ## Step 0 - Installing Cuda Toolkit and Cuda DNN (For GPU Version Only)
 
@@ -47,6 +53,10 @@ python -V
 ```
 You should see that your current python version is correct.
 
+Then, install pip (a package installer for Python) by typing
+```
+python get-pip.py
+```
 Next, we need to install anaconda.
 
 https://www.continuum.io/downloads#windows
@@ -71,7 +81,7 @@ By typing
 ```
 conda list
 ```
-We can see what packages we currently have in our tensorflow environment. This will be important during the rest of the installation process to make check that we have instaled everything correctly.
+we can see what packages we currently have in our tensorflow environment. This will be important during the rest of the installation process to make check that we have instaled everything correctly.
 
 I am not sure if the next step is a redundancy, but after hours of failed attempts at setting up a working Tensorflow and librosa environment, we recommend that you install python in the tensorflow environment just to be safe.
 ```
@@ -81,17 +91,22 @@ Next, we will install librosa (a Python library for audio and music analysis).
 ```
 conda install -c conda-forge librosa
 ```
-Then, 
+Then, install tensorflow by typing
+```
+pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-1.1.0-cp35-cp35m-win_amd64.whl
+```
+Now we should have all of the libraries installed in our Tensorflow environment to begin our work. To do a final check, run
+```
+conda list
+```
+again to make sure that all of our packages are correctly in the environment. 
 
-
-
-hi
-
-hii
-
-conda create -n tensorflow
-activate tensorflow
-python -V
-```conda list```
-conda install python=3.5.2
-conda install -c conda-forge librosa
+To test that all packages are working correctly, type
+```
+python
+import tensorflow as tf
+import librosa
+import matplotlib
+import numpy
+print('We did it!')
+```
